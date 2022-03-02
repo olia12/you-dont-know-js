@@ -4,7 +4,7 @@ const books = document.querySelectorAll('.book');
 const bookTitle = document.querySelectorAll('.book h2 a')[4];
 const body = document.querySelector('body');
 const adv = document.querySelectorAll('.adv');
-const book2Order = document.querySelectorAll('.book ul li');
+const bookOrder = document.querySelectorAll('.book ul li');
 
 books[0].before(books[1]);
 books[5].after(books[2]);
@@ -16,15 +16,19 @@ bookTitle.textContent = 'Книга 3. this и Прототипы Объекто
 
 adv[0].remove();
 
-book2Order[3].after(book2Order[6]);
-book2Order[6].after(book2Order[8]);
-book2Order[10].before(book2Order[2]);
+bookOrder[3].after(bookOrder[6]);
+bookOrder[6].after(bookOrder[8]);
+bookOrder[10].before(bookOrder[2]);
 
-book2Order[48].before(book2Order[55]);
-book2Order[55].after(book2Order[49]);
-book2Order[50].after(book2Order[48]);
-book2Order[53].after(book2Order[51]);
+bookOrder[48].before(bookOrder[55]);
+bookOrder[55].after(bookOrder[49]);
+bookOrder[50].after(bookOrder[48]);
+bookOrder[53].after(bookOrder[51]);
+
+const chapter = document.createElement('li');
+chapter.textContent = 'Глава 8: За пределами ES6';
+bookOrder[25].append(chapter);
 
 console.log(books); 
 console.log(bookTitle); 
-console.log(book2Order); 
+console.log(bookOrder); 
